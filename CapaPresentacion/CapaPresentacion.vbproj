@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AB3CC84-6B17-40CA-9F4D-6E3B573FD62E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CapaPresentacion.My.MyApplication</StartupObject>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CapaPresentacion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CapaPresentacion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.2\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarPais.Designer.vb">
+      <DependentUpon>AgregarPais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dbSGSdataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSGSdataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbSGSv3DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSGSv3DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fmrBackupBD.Designer.vb">
+      <DependentUpon>fmrBackupBD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrBackupBD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrCategoria.Designer.vb">
+      <DependentUpon>fmrCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrCategoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrCiudad.Designer.vb">
+      <DependentUpon>fmrCiudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrCiudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrCliente.Designer.vb">
+      <DependentUpon>fmrCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrDetalleEgreso.Designer.vb">
+      <DependentUpon>fmrDetalleEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrDetalleEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrDetalleIngreso.Designer.vb">
+      <DependentUpon>fmrDetalleIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrDetalleIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrDetalleIngreso1.Designer.vb">
+      <DependentUpon>fmrDetalleIngreso1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrDetalleIngreso1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrDetallePedido.Designer.vb">
+      <DependentUpon>fmrDetallePedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrDetallePedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrEgreso.Designer.vb">
+      <DependentUpon>fmrEgreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrEgreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrElegirCiudad.Designer.vb">
+      <DependentUpon>fmrElegirCiudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrElegirCiudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrElegirCliente.Designer.vb">
+      <DependentUpon>fmrElegirCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrElegirCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrElegirIngreso.Designer.vb">
+      <DependentUpon>fmrElegirIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrElegirIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrElegirProducto.Designer.vb">
+      <DependentUpon>fmrElegirProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrElegirProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrElegirProveedor.Designer.vb">
+      <DependentUpon>fmrElegirProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrElegirProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrIngreso.Designer.vb">
+      <DependentUpon>fmrIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrInicio.Designer.vb">
+      <DependentUpon>fmrInicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrInicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrLogin.Designer.vb">
+      <DependentUpon>fmrLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrMarca.Designer.vb">
+      <DependentUpon>fmrMarca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrMarca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrPais.Designer.vb">
+      <DependentUpon>fmrPais.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrPais.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrProducto.Designer.vb">
+      <DependentUpon>fmrProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrProveedor.Designer.vb">
+      <DependentUpon>fmrProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrProvincia.Designer.vb">
+      <DependentUpon>fmrProvincia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrProvincia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrUsuario.Designer.vb">
+      <DependentUpon>fmrUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fmrUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reportes\frmReporteComprobante.Designer.vb">
+      <DependentUpon>frmReporteComprobante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmReporteComprobante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgregarPais.resx">
+      <DependentUpon>AgregarPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrBackupBD.resx">
+      <DependentUpon>fmrBackupBD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrCategoria.resx">
+      <DependentUpon>fmrCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrCiudad.resx">
+      <DependentUpon>fmrCiudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrCliente.resx">
+      <DependentUpon>fmrCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrDetalleEgreso.resx">
+      <DependentUpon>fmrDetalleEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrDetalleIngreso.resx">
+      <DependentUpon>fmrDetalleIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrDetalleIngreso1.resx">
+      <DependentUpon>fmrDetalleIngreso1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrDetallePedido.resx">
+      <DependentUpon>fmrDetallePedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrEgreso.resx">
+      <DependentUpon>fmrEgreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrElegirCiudad.resx">
+      <DependentUpon>fmrElegirCiudad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrElegirCliente.resx">
+      <DependentUpon>fmrElegirCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrElegirIngreso.resx">
+      <DependentUpon>fmrElegirIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrElegirProducto.resx">
+      <DependentUpon>fmrElegirProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrElegirProveedor.resx">
+      <DependentUpon>fmrElegirProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrIngreso.resx">
+      <DependentUpon>fmrIngreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrInicio.resx">
+      <DependentUpon>fmrInicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrLogin.resx">
+      <DependentUpon>fmrLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrMarca.resx">
+      <DependentUpon>fmrMarca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrPais.resx">
+      <DependentUpon>fmrPais.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrProducto.resx">
+      <DependentUpon>fmrProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrProveedor.resx">
+      <DependentUpon>fmrProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrProvincia.resx">
+      <DependentUpon>fmrProvincia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmrUsuario.resx">
+      <DependentUpon>fmrUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmReporteComprobante.resx">
+      <DependentUpon>frmReporteComprobante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptComprobanteIngresos.rdlc" />
+    <EmbeddedResource Include="Reportes\rptProductos.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbSGSdataset.xsc">
+      <DependentUpon>dbSGSdataset.xsd</DependentUpon>
+    </None>
+    <None Include="dbSGSdataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbSGSdataset.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dbSGSdataset.xss">
+      <DependentUpon>dbSGSdataset.xsd</DependentUpon>
+    </None>
+    <None Include="dbSGSv3DataSet.xsc">
+      <DependentUpon>dbSGSv3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbSGSv3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbSGSv3DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbSGSv3DataSet.xss">
+      <DependentUpon>dbSGSv3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.vbproj">
+      <Project>{0c3219a9-c7e2-4f6a-8cf2-480cf99108e4}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.vbproj">
+      <Project>{4ac44601-28d2-4b6d-9e8d-bbec032dfc69}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\usuario-registrado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuraciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\egresos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-mujer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_img_prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar_img_prod.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\msvcr100.dll">
+      <Link>SqlServerTypes\x64\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x64\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x64\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\msvcr100.dll">
+      <Link>SqlServerTypes\x86\msvcr100.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\packages\Microsoft.SqlServer.Types.11.0.2\nativeBinaries\x86\SqlServerSpatial110.dll">
+      <Link>SqlServerTypes\x86\SqlServerSpatial110.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\etiquette_printer_01.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
